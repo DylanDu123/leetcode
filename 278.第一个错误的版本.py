@@ -10,6 +10,7 @@
 # @return a bool
 # def isBadVersion(version):
 
+
 class Solution:
     def firstBadVersion(self, n) -> bool:
         """
@@ -19,12 +20,11 @@ class Solution:
         left = 1
         right = n
         while left < right:
-            mid = int((left + right + 1) /2)
+            mid = left + ((right - left) // 2)
             if isBadVersion(mid):
                 right = mid
             else:
                 left = mid + 1
         return left
-        
-# @lc code=end
 
+# @lc code=end
