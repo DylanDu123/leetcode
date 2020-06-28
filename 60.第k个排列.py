@@ -31,4 +31,5 @@ class Solution:
         return result
 
 
+Solution().getPermutation(3, 3)
 # @lc code=end

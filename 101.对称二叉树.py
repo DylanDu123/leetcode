@@ -14,7 +14,6 @@ class TreeNode:
         self.left = None
         self.right = None
 
-
 # class Solution:
 #     def isSymmetric(self, root: TreeNode) -> bool:
 #         if root == None:
@@ -30,27 +29,27 @@ class TreeNode:
 #             return False
 #         return self.compare(left.left, right.right) and self.compare(left.right, right.left)
 
-class Solution:
-    def isSymmetric(self, root: TreeNode) -> bool:
-        if root == None:
-            return True
-        left_stack = [root]
-        right_stack = [root]
-        while len(left_stack):
-            left = left_stack.pop()
-            right = right_stack.pop()
-            if left == None and right == None:
-                continue
-            if left == None or right == None:
-                return False
-            if left.val != right.val:
-                return False
-            left_stack.append(left.left)
-            right_stack.append(right.right)
-            left_stack.append(left.right)
-            right_stack.append(right.left)
-            pass
+# class Solution:
+#     def isSymmetric(self, root: TreeNode) -> bool:
+#         if root == None:
+#             return True
+#         left_stack = [root]
+#         right_stack = [root]
+#         while len(left_stack):
+#             left = left_stack.pop()
+#             right = right_stack.pop()
+#             if left == None and right == None:
+#                 continue
+#             if left == None or right == None:
+#                 return False
+#             if left.val != right.val:
+#                 return False
+#             left_stack.append(left.left)
+#             right_stack.append(right.right)
+#             left_stack.append(left.right)
+#             right_stack.append(right.left)
+#             pass
 
-        return True
+#         return True
 
 # @lc code=end
